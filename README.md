@@ -1,7 +1,5 @@
 # CSE-151A-Project
 
-![Open In Colab] 
-
 1. Create a GitHub ID
 
 2. Create a GitHub Repository (Public or Private it is up to you. In the end it will have to be Public) and add your group members as collaborators
