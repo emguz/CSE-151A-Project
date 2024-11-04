@@ -1,5 +1,7 @@
 # CSE-151A-Project
 
+![Open In Colab] 
+
 1. Create a GitHub ID
 
 2. Create a GitHub Repository (Public or Private it is up to you. In the end it will have to be Public) and add your group members as collaborators
@@ -22,3 +24,5 @@ We plan to encode some ordinal values for streamlined analysis in future milesto
 
 Data can be downloaded via Kaggle, here: https://www.kaggle.com/datasets/mexwell/nba-shots
 Environment should be set up via Anaconda, with installed glob (installation code included in 'combine_data_csv'), and other standard libraries such as numpy, seaborn, sklearn, and pandas. 
+
+[Link to primary notebook file](explore.ipynb)
