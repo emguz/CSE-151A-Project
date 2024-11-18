@@ -38,7 +38,7 @@ We plan to encode some ordinal values for streamlined analysis in future milesto
 Data can be downloaded via Kaggle, here: https://www.kaggle.com/datasets/mexwell/nba-shots
 Environment should be set up via Anaconda, with installed glob (installation code included in 'combine_data_csv'), and other standard libraries such as numpy, seaborn, sklearn, and pandas. 
 
-[Link to primary notebook file](explore.ipynb)
+[Milestone II](explore.ipynb)
 
 ## Milestone III
 
@@ -76,6 +76,8 @@ Finish major preprocessing, this includes scaling and/or transforming your data,
 Our model is doing an okay job but is underfitting the graph because our recall is low and our accuracy isn't great. This means we need to add more complexity to our model which is why we were thinking about using SVM models because it can handle higher complexity and can handle non-linear data better.
 
 5: Update your README.md to include your new work and updates you have all added. Make sure to upload all code and notebooks. Provide links in your README.md
+
+[Milestone III Notebook](preprocess.ipynb)
 
 6. Conclusion section: What is the conclusion of your 1st model? What can be done to possibly improve it?
 
