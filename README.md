@@ -27,7 +27,7 @@ Linked here: https://github.com/emguz/CSE-151A-Project
 
 4. Plot your data. For tabular data, you will need to run scatters, for image data, you will need to plot your example classes.
 
-![pairplots](pairplot.png)
+![pairplots](pairplots.png)
 
 6. How will you preprocess your data? You should only explain (do not perform pre-processing as that is in MS3) this in your README.md file and link your Jupyter notebook to it. All code and  Jupyter notebooks have be uploaded to your repo.
 
