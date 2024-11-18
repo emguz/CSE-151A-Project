@@ -51,7 +51,6 @@ Finish major preprocessing, this includes scaling and/or transforming your data,
 3: Evaluate your model and compare training vs. test error
 
 *Training report*
-*Training report*
 
 | Class     | Precision | Recall | F1-Score | Support  |
 |-----------|-----------|--------|----------|----------|
