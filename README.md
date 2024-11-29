@@ -54,7 +54,7 @@ Finish major preprocessing, this includes scaling and/or transforming your data,
 
 | Class     | Precision | Recall | F1-Score | Support  |
 |-----------|-----------|--------|----------|----------|
-| False     | 0.62      | 0.84   | 0.71     | 1835231  |
+| False     | 0.62      | 0.85   | 0.71     | 1835231  |
 | True      | 0.67      | 0.38   | 0.48     | 1549778  |
 | **Accuracy** |         |        | 0.63     | 3385009  |
 | **Macro Avg** | 0.64   | 0.61   | 0.60     | 3385009  |
