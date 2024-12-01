@@ -87,9 +87,39 @@ In conclusion, our first model was a decent starting point but is inconsistent. 
 
 1: Train your second model. Make sure you use a different model than in MS3, and you must fine-tune your model to get an accurate comparison.
 
+For our second model, we employed a Decision Tree using Gini Impurity to achieve a similar performance to our first model.
+
 2: Evaluate your model and compare training vs. test error
 
+**Training Performance**
+
+| Class       | Precision | Recall | F1-Score | Support  |
+|-------------|-----------|--------|----------|----------|
+| **False**   | 0.62      | 0.85   | 0.72     | 1,831,715 |
+| **True**    | 0.69      | 0.39   | 0.50     | 1,546,950 |
+| **Accuracy**|           |        | 0.64     | 3,378,665 |
+| **Macro Avg** | 0.65    | 0.62   | 0.61     | 3,378,665 |
+| **Weighted Avg** | 0.65 | 0.64   | 0.62     | 3,378,665 |
+
+---
+
+**Test Performance**
+
+| Class       | Precision | Recall | F1-Score | Support |
+|-------------|-----------|--------|----------|---------|
+| **False**   | 0.62      | 0.85   | 0.72     | 458,689 |
+| **True**    | 0.68      | 0.39   | 0.50     | 385,978 |
+| **Accuracy**|           |        | 0.64     | 844,667 |
+| **Macro Avg** | 0.65    | 0.62   | 0.61     | 844,667 |
+| **Weighted Avg** | 0.65 | 0.64   | 0.62     | 844,667 |
+
+The second model performs similarly, if not slightly better, to our first model. Like the first model, the second model also struggles with misclassifying shot successes as **False**, with a recall for **True** of .39. **True** precision and recall, **False** recall, and accuracy have marginally improved by about 1 percent from the first model. Other metrics have not shifted.
+
 3: Answer the questions: Where does your model fit in the fitting graph? and What are the next models you are thinking of and why?
+
+![fittinggraph](images/fittinggraph.png)
+
+Our model is fitted well in the fitting graph. It strikes the balance between underfitting and overfitting, lying at the local minima of the test log-loss curve. Although the model is well-fitted, it performs only marginally better than our Logistic Regression model, which is inadequate. Specifically, the model has poor recall for shot successes, which fails to accomplish our goal of creating a shot-success classifier. Some optimization could be made to improve perfomance for **True**, such as adjusting the class weight for **True**, and employing a Decision Tree with modified thresholds for certain decision nodes. There is a low level of control over particular decision node thresholds in a Decision Tree, so instead, a Neural Network may allow us to finely tune our decision thresholds for **True**. It would also leverage our high number of observations.
 
 4: Update your README.md to include your new work and updates you have all added. Make sure to upload all code and notebooks. Provide links in your README.md
 
