@@ -82,3 +82,25 @@ Our model is doing an okay job but is underfitting the graph because our recall 
 6. Conclusion section: What is the conclusion of your 1st model? What can be done to possibly improve it?
 
 In conclusion, our first model was a decent starting point but is inconsistent. Our low recall for true but not false shows the unreliability of our current model so having a more complex SVM model should be able to determine when a shot is made
+
+## Milestone IV
+
+1: Train your second model. Make sure you use a different model than in MS3, and you must fine-tune your model to get an accurate comparison.
+
+2: Evaluate your model and compare training vs. test error
+
+3: Answer the questions: Where does your model fit in the fitting graph? and What are the next models you are thinking of and why?
+
+4: Update your README.md to include your new work and updates you have all added. Make sure to upload all code and notebooks. Provide links in your README.md
+
+  [Milestone IV Notebook](modelling.ipynb)
+  
+5. Conclusion section: What is the conclusion of your 2nd model? What can be done to possibly improve it? Note: The conclusion section should be it's own independent section. i.e. Methods: will have models 1 and 2 methods, Conclusion: will have models 1 and 2 results and discussion. 
+
+6. Provide predictions of correct and FP and FN from your test dataset.
+
+*TODO*
+- Explain that our testing and training error are similar suggesting that we are properly fitted.
+- Add the fitting graph images and explain that we fitted (or slightly over/under fitted) because of how we tuned or hyperparameters
+- Suggest using an Artificial Neura Network or something to leverage our many observations.
+- 
