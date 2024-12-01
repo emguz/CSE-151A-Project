@@ -23,11 +23,11 @@ Linked here: https://github.com/emguz/CSE-151A-Project
 - Our inital data helped us look at how the data was distributted so we could get a sense of what type of models we could try out.
 - We dropped any columns that were highly correlated. To do this we looked at the heatmap.
 
-![heatmap](heatmap.png)
+![heatmap](images/heatmap.png)
 
 4. Plot your data. For tabular data, you will need to run scatters, for image data, you will need to plot your example classes.
 
-![pairplots](pairplot.png)
+![pairplots](images/pairplot.png)
 
 6. How will you preprocess your data? You should only explain (do not perform pre-processing as that is in MS3) this in your README.md file and link your Jupyter notebook to it. All code and  Jupyter notebooks have be uploaded to your repo.
 
