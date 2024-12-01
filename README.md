@@ -103,4 +103,4 @@ In conclusion, our first model was a decent starting point but is inconsistent. 
 - Explain that our testing and training error are similar suggesting that we are properly fitted.
 - Add the fitting graph images and explain that we fitted (or slightly over/under fitted) because of how we tuned or hyperparameters
 - Suggest using an Artificial Neura Network or something to leverage our many observations.
-- 
+
