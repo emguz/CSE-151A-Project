@@ -77,7 +77,7 @@ Our model is doing an okay job but is underfitting the graph because our recall 
 
 5: Update your README.md to include your new work and updates you have all added. Make sure to upload all code and notebooks. Provide links in your README.md
 
-[Milestone III Notebook](preprocess.ipynb)
+[Milestone III](preprocess.ipynb)
 
 6. Conclusion section: What is the conclusion of your 1st model? What can be done to possibly improve it?
 
@@ -93,7 +93,7 @@ In conclusion, our first model was a decent starting point but is inconsistent. 
 
 4: Update your README.md to include your new work and updates you have all added. Make sure to upload all code and notebooks. Provide links in your README.md
 
-  [Milestone IV Notebook](modelling.ipynb)
+  [Milestone IV](modelling.ipynb)
   
 5. Conclusion section: What is the conclusion of your 2nd model? What can be done to possibly improve it? Note: The conclusion section should be it's own independent section. i.e. Methods: will have models 1 and 2 methods, Conclusion: will have models 1 and 2 results and discussion. 
 
