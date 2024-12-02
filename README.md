@@ -87,7 +87,7 @@ In conclusion, our first model was a decent starting point but is inconsistent. 
 
 1: Train your second model. Make sure you use a different model than in MS3, and you must fine-tune your model to get an accurate comparison.
 
-For our second model, we employed a Decision Tree using Gini Impurity to achieve a similar performance to our first model.
+For our second model, we employed a Decision Tree using Gini Impurity. To fine tune, we trained our model on various levels of complexity to find the optimal fit.
 
 2: Evaluate your model and compare training vs. test error
 
@@ -113,21 +113,37 @@ For our second model, we employed a Decision Tree using Gini Impurity to achieve
 | **Macro Avg** | 0.65    | 0.62   | 0.61     | 844,667 |
 | **Weighted Avg** | 0.65 | 0.64   | 0.62     | 844,667 |
 
-The second model performs similarly, if not slightly better, to our first model. Like the first model, the second model also struggles with misclassifying shot successes as **False**, with a recall for **True** of .39. **True** precision and recall, **False** recall, and accuracy have marginally improved by about 1 percent from the first model. Other metrics have not shifted.
+The model is mediocre, performing only slightly better than a naive classifier with an accuracy of .64. The Precision for **True** and **False** are middling, and the Recall for **True** is poor. 
 
 3: Answer the questions: Where does your model fit in the fitting graph? and What are the next models you are thinking of and why?
 
 ![fittinggraph](images/fittinggraph.png)
 
-Our model is fitted well in the fitting graph. It strikes the balance between underfitting and overfitting, lying at the local minima of the test log-loss curve. Although the model is well-fitted, it performs only marginally better than our Logistic Regression model, which is inadequate. Specifically, the model has poor recall for shot successes, which fails to accomplish our goal of creating a shot-success classifier. Some optimization could be made to improve perfomance for **True**, such as adjusting the class weight for **True**, and employing a Decision Tree with modified thresholds for certain decision nodes. There is a low level of control over particular decision node thresholds in a Decision Tree, so instead, a Neural Network may allow us to finely tune our decision thresholds for **True**. It would also leverage our high number of observations.
+Our model is fitted well in the fitting graph. It strikes the balance between underfitting and overfitting, lying at the local minima of the test log-loss curve. Some optimization could be made to improve perfomance for **True**, such as adjusting the class weight for **True**, and employing a Decision Tree with modified thresholds for certain decision nodes. There is a low level of control over particular decision node thresholds in a Decision Tree, so instead, a Neural Network may allow us to finely tune our decision thresholds for **True**. It would also leverage our high number of observations.
 
 4: Update your README.md to include your new work and updates you have all added. Make sure to upload all code and notebooks. Provide links in your README.md
 
   [Milestone IV](modelling.ipynb)
   
+Model 2 Methods
+  
 5. Conclusion section: What is the conclusion of your 2nd model? What can be done to possibly improve it? Note: The conclusion section should be it's own independent section. i.e. Methods: will have models 1 and 2 methods, Conclusion: will have models 1 and 2 results and discussion. 
 
+Model 2 Conclusion
+
+The second model performs similarly, if not slightly better, to our first model. Like the first model, the second model also struggles with misclassifying shot successes as **False**, with a recall for **True** of .39. **True** precision and recall, **False** recall, and accuracy have marginally improved by about 1 percent from the first model. Other metrics have not shifted. Although the model is well-fitted, it performs only marginally better than our Logistic Regression model, which is inadequate. Specifically, the model has poor recall for shot successes, which fails to accomplish our goal of creating a shot-success classifier. Some optimization could be made to improve perfomance for **True**, such as adjusting the class weight for **True**, or adjusting the feature importance scores for features that impact **True** recall significantly. 
+ 
 6. Provide predictions of correct and FP and FN from your test dataset.
+
+**Classified predictions of Test Dataset:**
+| Actual   | Predicted | Type   |
+|----------|-----------|--------|
+| 1118264  | False     | Correct|
+| 3970316  | True      | Correct|
+| 1457364  | False     | Correct|
+| 1849149  | True      | FN     |
+| 2776147  | False     | Correct|
+
 
 *TODO*
 - Explain that our testing and training error are similar suggesting that we are properly fitted.
