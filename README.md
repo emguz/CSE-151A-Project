@@ -148,8 +148,4 @@ The second model performs similarly, if not slightly better, to our first model.
 | 2776147  | False     | Correct|
 
 
-*TODO*
-- Explain that our testing and training error are similar suggesting that we are properly fitted.
-- Add the fitting graph images and explain that we fitted (or slightly over/under fitted) because of how we tuned or hyperparameters
-- Suggest using an Artificial Neural Network or something to leverage our many observations.
 
