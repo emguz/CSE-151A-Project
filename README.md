@@ -124,6 +124,11 @@ Our model is fitted well in the fitting graph. It strikes the balance between un
 4: Update your README.md to include your new work and updates you have all added. Make sure to upload all code and notebooks. Provide links in your README.md
 
 [Milestone IV](modelling.ipynb)
+Model 2 Methods
+
+For our second model, we used a Decision Tree.
+Utilizing the train/test splits from the previous model, we fit the Decision Tree on a variety of complexities. After computing the predictions and the Log Loss for each train/test run, we plotted each model on a train/test error vs complexity graph to determine the optimal complexity, which was 10. 
+We calculated metrics using the optimal model, creating a confusion matrix, a classification report for train and test performance, Log Loss, and other statistics.  
   
 5. Conclusion section: What is the conclusion of your 2nd model? What can be done to possibly improve it? Note: The conclusion section should be it's own independent section. i.e. Methods: will have models 1 and 2 methods, Conclusion: will have models 1 and 2 results and discussion. 
 
