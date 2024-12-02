@@ -75,6 +75,8 @@ Finish major preprocessing, this includes scaling and/or transforming your data,
 
 Our model is doing an okay job but is underfitting the graph because our recall is low and our accuracy isn't great. This means we need to add more complexity to our model which is why we were thinking about using SVM models because it can handle higher complexity and can handle non-linear data better.
 
+![logfitting][logfitting.png]
+
 5: Update your README.md to include your new work and updates you have all added. Make sure to upload all code and notebooks. Provide links in your README.md
 
 [Milestone III](preprocess.ipynb)
