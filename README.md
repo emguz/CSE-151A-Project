@@ -141,9 +141,9 @@ The second model performs similarly, if not slightly better, to our first model.
 
 Correct: TP + TN = 386,637 + 146,726 = 533,363
 
-FP = 72,052
+FP: 72,052
 
-FN = 239,252
+FN: 239,252
 
 We also have a table with the predictions classified as correct, FP or FN in the notebook. Here is the head.
 
