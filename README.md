@@ -38,7 +38,7 @@ We plan to encode some ordinal values for streamlined analysis in future milesto
 Data can be downloaded via Kaggle, here: https://www.kaggle.com/datasets/mexwell/nba-shots
 Environment should be set up via Anaconda, with installed glob (installation code included in 'combine_data_csv'), and other standard libraries such as numpy, seaborn, sklearn, and pandas. 
 
-[Milestone II](explore.ipynb)
+[Milestone II Notebook](explore.ipynb)
 
 ## Milestone III
 
@@ -75,9 +75,11 @@ Finish major preprocessing, this includes scaling and/or transforming your data,
 
 Our model is doing an okay job but is underfitting the graph because our recall is low and our accuracy isn't great. This means we need to add more complexity to our model which is why we were thinking about using SVM models because it can handle higher complexity and can handle non-linear data better.
 
+![logfitting](images/logfitting.png)
+
 5: Update your README.md to include your new work and updates you have all added. Make sure to upload all code and notebooks. Provide links in your README.md
 
-[Milestone III](preprocess.ipynb)
+[Milestone III Notebook](preprocess.ipynb)
 
 6. Conclusion section: What is the conclusion of your 1st model? What can be done to possibly improve it?
 
@@ -87,20 +89,74 @@ In conclusion, our first model was a decent starting point but is inconsistent. 
 
 1: Train your second model. Make sure you use a different model than in MS3, and you must fine-tune your model to get an accurate comparison.
 
+For our second model, we employed a Decision Tree using Gini Impurity. To fine tune, we trained our model on various levels of complexity to find the optimal fit.
+
 2: Evaluate your model and compare training vs. test error
+
+**Training Performance**
+
+| Class       | Precision | Recall | F1-Score | Support  |
+|-------------|-----------|--------|----------|----------|
+| **False**   | 0.62      | 0.85   | 0.72     | 1,831,715 |
+| **True**    | 0.69      | 0.39   | 0.50     | 1,546,950 |
+| **Accuracy**|           |        | 0.64     | 3,378,665 |
+| **Macro Avg** | 0.65    | 0.62   | 0.61     | 3,378,665 |
+| **Weighted Avg** | 0.65 | 0.64   | 0.62     | 3,378,665 |
+
+---
+
+**Test Performance**
+
+| Class       | Precision | Recall | F1-Score | Support |
+|-------------|-----------|--------|----------|---------|
+| **False**   | 0.62      | 0.85   | 0.72     | 458,689 |
+| **True**    | 0.68      | 0.39   | 0.50     | 385,978 |
+| **Accuracy**|           |        | 0.64     | 844,667 |
+| **Macro Avg** | 0.65    | 0.62   | 0.61     | 844,667 |
+| **Weighted Avg** | 0.65 | 0.64   | 0.62     | 844,667 |
+
+The model is mediocre, performing only slightly better than a naive classifier with an accuracy of .64. Similar to our first model, this models struggles with recalling True values.
 
 3: Answer the questions: Where does your model fit in the fitting graph? and What are the next models you are thinking of and why?
 
+![fittinggraph](images/fittinggraph.png)
+
+Our model is fitted well in the fitting graph. It strikes the balance between underfitting and overfitting, lying at the local minima of the test log-loss curve. Some optimization could be made to improve perfomance for **True**, such as adjusting the class weight for **True**, and employing a Decision Tree with modified thresholds for certain decision nodes. Given that we have a lot of observations to work with, using an Artificial Neural Network may allow us to finely tune our decision thresholds for **True**. 
+
 4: Update your README.md to include your new work and updates you have all added. Make sure to upload all code and notebooks. Provide links in your README.md
 
-  [Milestone IV](modelling.ipynb)
+[Milestone IV Notebook](modelling.ipynb)
+
+For our second model, we used a Decision Tree.
+Utilizing the train/test splits from the previous model, we fit the Decision Tree on a variety of complexities. After computing the predictions and the Log Loss for each train/test run, we plotted each model on a train/test error vs complexity graph to determine the optimal complexity, which was 10. 
+We calculated metrics using the optimal model, creating a confusion matrix, a classification report for train and test performance, Log Loss, and other statistics.  
   
 5. Conclusion section: What is the conclusion of your 2nd model? What can be done to possibly improve it? Note: The conclusion section should be it's own independent section. i.e. Methods: will have models 1 and 2 methods, Conclusion: will have models 1 and 2 results and discussion. 
 
+Model 2 Conclusion
+
+The second model performs similarly, if not slightly better, to our first model. Like the first model, the second model also struggles with misclassifying shot successes as **False**, with a recall for **True** of .39. **True** precision and recall, **False** recall, and accuracy have marginally improved by about 1 percent from the first model. Other metrics have not shifted. Although the model is well-fitted, it performs only marginally better than our Logistic Regression model, which is inadequate. Some optimization could be made to improve perfomance for **True**, such as adjusting the class weight for **True**, or adjusting the feature importance scores for features that impact **True** recall significantly. 
+ 
 6. Provide predictions of correct and FP and FN from your test dataset.
 
-*TODO*
-- Explain that our testing and training error are similar suggesting that we are properly fitted.
-- Add the fitting graph images and explain that we fitted (or slightly over/under fitted) because of how we tuned or hyperparameters
-- Suggest using an Artificial Neural Network or something to leverage our many observations.
+Correct: TP + TN = 386,637 + 146,726 = 533,363
+
+FP: 72,052
+
+FN: 239,252
+
+We also have a table with the predictions classified as correct, FP or FN in the notebook. Here is the head.
+
+**Classified predictions of Test Dataset:**
+
+We provided this in the notebook, but here is a sample.
+| Actual   | Predicted | Type   |
+|----------|-----------|--------|
+| 1118264  | False     | Correct|
+| 3970316  | True      | Correct|
+| 1457364  | False     | Correct|
+| 1849149  | True      | FN     |
+| 2776147  | False     | Correct|
+
+
 
