@@ -38,7 +38,7 @@ We plan to encode some ordinal values for streamlined analysis in future milesto
 Data can be downloaded via Kaggle, here: https://www.kaggle.com/datasets/mexwell/nba-shots
 Environment should be set up via Anaconda, with installed glob (installation code included in 'combine_data_csv'), and other standard libraries such as numpy, seaborn, sklearn, and pandas. 
 
-[Milestone II](explore.ipynb)
+[Milestone II Notebook](explore.ipynb)
 
 ## Milestone III
 
@@ -79,7 +79,7 @@ Our model is doing an okay job but is underfitting the graph because our recall 
 
 5: Update your README.md to include your new work and updates you have all added. Make sure to upload all code and notebooks. Provide links in your README.md
 
-[Milestone III](preprocess.ipynb)
+[Milestone III Notebook](preprocess.ipynb)
 
 6. Conclusion section: What is the conclusion of your 1st model? What can be done to possibly improve it?
 
@@ -115,18 +115,17 @@ For our second model, we employed a Decision Tree using Gini Impurity. To fine t
 | **Macro Avg** | 0.65    | 0.62   | 0.61     | 844,667 |
 | **Weighted Avg** | 0.65 | 0.64   | 0.62     | 844,667 |
 
-The model is mediocre, performing only slightly better than a naive classifier with an accuracy of .64. The Precision for **True** and **False** are middling, and the Recall for **True** is poor. 
+The model is mediocre, performing only slightly better than a naive classifier with an accuracy of .64. Similar to our first model, this models struggles with recalling True values.
 
 3: Answer the questions: Where does your model fit in the fitting graph? and What are the next models you are thinking of and why?
 
 ![fittinggraph](images/fittinggraph.png)
 
-Our model is fitted well in the fitting graph. It strikes the balance between underfitting and overfitting, lying at the local minima of the test log-loss curve. Some optimization could be made to improve perfomance for **True**, such as adjusting the class weight for **True**, and employing a Decision Tree with modified thresholds for certain decision nodes. There is a low level of control over particular decision node thresholds in a Decision Tree, so instead, a Neural Network may allow us to finely tune our decision thresholds for **True**. It would also leverage our high number of observations.
+Our model is fitted well in the fitting graph. It strikes the balance between underfitting and overfitting, lying at the local minima of the test log-loss curve. Some optimization could be made to improve perfomance for **True**, such as adjusting the class weight for **True**, and employing a Decision Tree with modified thresholds for certain decision nodes. Given that we have a lot of observations to work with, using an Artificial Neural Network may allow us to finely tune our decision thresholds for **True**. 
 
 4: Update your README.md to include your new work and updates you have all added. Make sure to upload all code and notebooks. Provide links in your README.md
 
-[Milestone IV](modelling.ipynb)
-Model 2 Methods
+[Milestone IV Notebook](modelling.ipynb)
 
 For our second model, we used a Decision Tree.
 Utilizing the train/test splits from the previous model, we fit the Decision Tree on a variety of complexities. After computing the predictions and the Log Loss for each train/test run, we plotted each model on a train/test error vs complexity graph to determine the optimal complexity, which was 10. 
@@ -136,11 +135,19 @@ We calculated metrics using the optimal model, creating a confusion matrix, a cl
 
 Model 2 Conclusion
 
-The second model performs similarly, if not slightly better, to our first model. Like the first model, the second model also struggles with misclassifying shot successes as **False**, with a recall for **True** of .39. **True** precision and recall, **False** recall, and accuracy have marginally improved by about 1 percent from the first model. Other metrics have not shifted. Although the model is well-fitted, it performs only marginally better than our Logistic Regression model, which is inadequate. Specifically, the model has poor recall for shot successes, which fails to accomplish our goal of creating a shot-success classifier. Some optimization could be made to improve perfomance for **True**, such as adjusting the class weight for **True**, or adjusting the feature importance scores for features that impact **True** recall significantly. 
+The second model performs similarly, if not slightly better, to our first model. Like the first model, the second model also struggles with misclassifying shot successes as **False**, with a recall for **True** of .39. **True** precision and recall, **False** recall, and accuracy have marginally improved by about 1 percent from the first model. Other metrics have not shifted. Although the model is well-fitted, it performs only marginally better than our Logistic Regression model, which is inadequate. Some optimization could be made to improve perfomance for **True**, such as adjusting the class weight for **True**, or adjusting the feature importance scores for features that impact **True** recall significantly. 
  
 6. Provide predictions of correct and FP and FN from your test dataset.
 
+Correct: TP + TN = 386,637 + 146,726 = 533,363
+FP = 72,052
+FN = 239,252
+
+We also have a table with the predictions classified as correct, FP or FN in the notebook. Here is the head.
+
 **Classified predictions of Test Dataset:**
+
+We provided this in the notebook, but here is a sample.
 | Actual   | Predicted | Type   |
 |----------|-----------|--------|
 | 1118264  | False     | Correct|
