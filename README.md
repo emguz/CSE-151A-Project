@@ -150,13 +150,16 @@ We also have a table with the predictions classified as correct, FP or FN in the
 **Classified predictions of Test Dataset:**
 
 We provided this in the notebook, but here is a sample.
-| Actual   | Predicted | Type   |
-|----------|-----------|--------|
-| 1118264  | False     | Correct|
-| 3970316  | True      | Correct|
-| 1457364  | False     | Correct|
-| 1849149  | True      | FN     |
-| 2776147  | False     | Correct|
+
+
+|          | Actual  | Predicted | Type    |
+|----------|---------|-----------|---------|
+| 1118264  | False   | False     | Correct |
+| 3970316  | True    | True      | Correct |
+| 1457364  | False   | False     | Correct |
+| 1849149  | False   | True      | FN      |
+| 2776147  | False   | False     | Correct |
+
 
 
 
