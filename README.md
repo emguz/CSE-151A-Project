@@ -275,8 +275,12 @@ However, another likely possibility is that there simply are no good measurable 
 ### STATEMENT OF COLLABORATION
 
 Emil Guzman (Project Manager): Project planning + ideation, data processing
+
 Nicholas Jobe (Coding): Model creation + training, data visualization
+
 Kekoa Picket (Coding): Model creation + training, data visualization
+
 Ethan Han (Analysis): Data exploration, model evaluation + visualization
+
 Stephanie Li (Writing): Data exploration, data preprocessing, milestone writing
 
