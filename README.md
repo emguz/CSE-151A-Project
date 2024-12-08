@@ -162,7 +162,16 @@ We provided this in the notebook, but here is a sample.
 
 
 
-## Milestone 5
+## Milestone V
+
+### Notebook Files:
+
+[Milestone II Notebook](explore.ipynb)
+
+[Milestone III Notebook](preprocess.ipynb)
+
+[Milestone IV Notebook](modelling.ipynb)
+
 
 ### INTRODUCTION
 
