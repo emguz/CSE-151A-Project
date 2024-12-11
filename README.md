@@ -100,8 +100,6 @@ The Decision Tree model performed minimally better than the previous Logistic Re
 | **Weighted Avg** | 0.65 | 0.64   | 0.62     | 844,667 |
 
 <img src="./images/fittinggraph.png" alt="logfitting" width="800">
-![fittinggraph](images/fittinggraph.png)
-
 
 ### DISCUSSION
 
