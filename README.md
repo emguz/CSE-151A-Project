@@ -4,11 +4,11 @@
 
 ### Notebook Files:
 
-[Milestone II Notebook](explore.ipynb)
+[Data Exploration Notebook (Milestone II)](explore.ipynb)
 
-[Milestone III Notebook](preprocess.ipynb)
+[Preprocessing + Model 1 Notebook (Milestone III)](preprocess.ipynb)
 
-[Milestone IV Notebook](modelling.ipynb)
+[Model 2 Notebook (Milestone IV)](final.ipynb)
 
 
 ### INTRODUCTION
